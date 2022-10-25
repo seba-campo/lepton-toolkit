@@ -17,14 +17,9 @@ function main(qtyTab, qtyItem, fileName){
     const array = [];
 
     for(let n = 1; n<= qtyTab; n++){
-        for ( let i = 1; i<= qtyItem; i++){
-            // const tab = "   ";
-            // var texto = "{"
-    
+        for ( let i = 1; i<= qtyItem; i++){  
             var result = `{pieza_obs_${n}_${i}}\t{pieza_mat_${n}_${i}}\t{pieza_c_arr_${n}_${i}}\t{pieza_c_aba_${n}_${i}}\t{pieza_c_der_${n}_${i}}\t{pieza_c_izq_${n}_${i}}\n`;
-    
             array.push(result);
-    
         }
     }
 
