@@ -13,7 +13,7 @@ function parseaArgv(){
 }
 
 
-function main(fileName){
+function main(fn){
     // RAW DATA
     const arrayDeColores = ["Espiga","Alaska","Anahuac","Aserradero Nordico","Blanco Absoluto","Blanco Frosty","Cairo","Cendra Escandinavo","Cerezo","Chardonnay","Cocoa","Dakota","Durango","Ebano Indi","Encino Polar","Espresso","Fresni Bruma","Gris","Gris Claro","Jade","Laricina Siberia","Latte","Linosa Ceniza","Lombardia","Malta","Marmara","Metropolitan","Monarca","Moscato","Nativa","Nebraska","Negro","Niquel","Nocce Milano","Nogal Britanico","Nogal neo","Nogal Terracota","Nougat","Oporto","Oxford","Precompuesto Ceniza","Rioja","Riviera","Roble Americano","Roble Dakar","Roble Merida","Roble Provenza","Roble Santana","Seda Giorgo","Teka Artico","Terra","Toscana","Turmalina","Vison","Vizcaya","Wengue","Zafiro"];
 
@@ -31,10 +31,10 @@ function main(fileName){
     
     
     // Logica de concadenación
-    function agregarTemplate (arrayBase, textoPrevio, textoPost){
-        for(let i = 0; i< arrayBase.length; i++){
-            var element = arrayBase[i];
-            var matFinal = textoPrevio + element + textoPost;
+    function agregarTemplate (a, p, px){
+        for(let i = 0; i< a.length; i++){
+            var element = a[i];
+            var matFinal = p + element + px;
     
             arrayExport.push(matFinal);
         };   
@@ -74,14 +74,16 @@ function main(fileName){
     
     // console.log(arrayExport);
 
-    fileName = './'+ fileName+'.txt';
-    fs.writeFile(fileName, arrayExport.join(''), err =>{
+    // Se genera un .txt con el nombre indicado en la funcion.
+    // si ya existe, se sobre escribe
+    fn = './'+ fn+'.txt';
+    fs.writeFile(fn, arrayExport.join(''), err =>{
         if(err){
             console.log(err)
         }
         else{
             console.log("Creado el archivo----");
-            console.log("Creado el archivo: " + fileName);
+            console.log("Creado el archivo: " + fn);
 
         }
     })

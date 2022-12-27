@@ -1,0 +1,45 @@
+.mixer__container {
+  display: flex;
+  background-color: aliceblue;
+  border: 1px solid black;
+  border-radius: 2px;
+}
+
+.mixer__configs {
+  width: 50vw;
+}
+
+.form__container-div .mixer__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.mixer__configs {
+  border: 1px solid black;
+  border-radius: 2px;
+}
+
+.form__container-div {
+  display: flex;
+  flex-direction: column;
+  /* width: 35vw; */
+  margin: 10px 15px;
+}
+
+.form__label {
+  margin: 5px 0;
+}
+
+input {
+  margin: 2px 0;
+}
+
+.addMat {
+  width: 100px;
+  height: 25px;
+}
+
+.form__generate {
+  align-self: center;
+  margin: 10px 15px;
+}
