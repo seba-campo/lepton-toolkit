@@ -1,13 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
+
+body {
+  background-color: #0d1117;
+  color: #c9d1d9;
+}
+
 .mixer__container {
   display: flex;
-  background-color: aliceblue;
-  border: 1px solid black;
-  border-radius: 2px;
+  /* background-color: aliceblue; */
+  border: 1px solid rgb(101, 101, 101);
+  border-radius: 4px;
 }
 
 .mixer__configs {
   width: 50vw;
-  height: 65vh;
+  min-height: 65vh;
+  color: #6eb1f4;
+  font-size: 20px;
 }
 
 .form__container-div .mixer__form {
@@ -15,9 +24,14 @@
   flex-direction: column;
 }
 
+.fPrefijo-input {
+  width: 160px;
+}
+
 .mixer__configs {
-  border: 1px solid black;
+  border: 1px solid rgb(101, 101, 101);
   border-radius: 2px;
+  font-family: "Roboto", sans-serif;
 }
 
 .form__container-div {
@@ -32,10 +46,11 @@
 }
 
 input {
-  margin: 2px 0;
+  margin: 4px 2px;
 }
 
 .addMat {
+  margin: 10px 2px;
   width: 100px;
   height: 25px;
 }
@@ -43,6 +58,20 @@ input {
 .form__generate {
   align-self: center;
   margin: 10px 15px;
+  background-color: #388bfd;
+  font-size: 23px;
+  width: 100px;
+  height: 50px;
+  padding: 2px 3px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+}
+
+.addSufijo {
+  margin: 10px 2px;
+  width: 100px;
+  height: 25px;
 }
 
 /*  */
@@ -50,7 +79,7 @@ input {
 .div__textareacontent {
   display: flex;
   padding: 5px 10px;
-  border: 1px solid black;
+  border: 1px solid rgb(101, 101, 101);
   width: 50vw;
 }
 
